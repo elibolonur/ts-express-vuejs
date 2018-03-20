@@ -5,10 +5,12 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const nodeModules = utils.getExternalNodeModules();
 
 module.exports = {
-  entry: "./src/server/app.ts",
+  entry: {
+    "server/app": "./src/server/app.ts"
+  },
   output: {
-    path: path.resolve(__dirname, "../dist"),
-    filename: "app.js"
+    filename: "[name].js",
+    path: path.resolve(__dirname, "../dist")
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"]

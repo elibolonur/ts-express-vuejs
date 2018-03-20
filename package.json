@@ -6,8 +6,7 @@
   "scripts": {
     "build": "rimraf dist && webpack --mode development --config config/webpack.prod.js",
     "start": "npm run build && node ./dist/app.js",
-    "watch": "nodemon -e ts -w ./src/server/ -x npm run watch:serve",
-    "watch:serve": "ts-node --inspect=3000 ./src/server/app.ts"
+    "watch:server": "nodemon --config ./config/nodemon.config.json"
   },
   "author": "Onur Elibol",
   "license": "ISC",

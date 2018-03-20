@@ -1,0 +1,8 @@
+{
+  "watch": [
+    "./src/server/"
+  ],
+  "ext": "ts",
+  "ignore": ["src/**/*.spec.ts"],
+  "exec": "ts-node --inspect=3000 ./src/server/app.ts"
+}

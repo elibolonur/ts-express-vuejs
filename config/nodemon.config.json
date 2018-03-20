@@ -3,6 +3,8 @@
     "./src/server/"
   ],
   "ext": "ts",
-  "ignore": ["src/**/*.spec.ts"],
+  "ignore": [
+    "src/**/*.test.ts"
+  ],
   "exec": "ts-node --inspect=3000 ./src/server/app.ts"
 }

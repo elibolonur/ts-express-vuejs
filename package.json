@@ -4,8 +4,9 @@
   "description": "Boilerplate for Express + Vue.JS with Typescript",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack --config config/webpack.client.config.js",
     "start": "node ./dist/app.js",
-    "build:server": "rimraf dist && webpack --mode production --config config/webpack.prod.js",
+    "build:server": "rimraf dist && webpack --config config/webpack.prod.js",
     "watch:server": "nodemon --config ./config/nodemon.config.json"
   },
   "author": "Onur Elibol",
@@ -30,6 +31,7 @@
     "tslint-config-prettier": "^1.10.0",
     "typescript": "^2.7.2",
     "vue-loader": "^14.2.1",
+    "vue-template-compiler": "^2.5.16",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.12",
     "webpack-merge": "^4.1.2"
@@ -37,6 +39,8 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "dotenv": "^5.0.1",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1"
   }
 }

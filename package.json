@@ -4,8 +4,8 @@
   "description": "Boilerplate for Express + Vue.JS with Typescript",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && webpack --mode development --config config/webpack.prod.js",
-    "start": "npm run build && node ./dist/app.js",
+    "start": "node ./dist/app.js",
+    "build:server": "rimraf dist && webpack --mode production --config config/webpack.prod.js",
     "watch:server": "nodemon --config ./config/nodemon.config.json"
   },
   "author": "Onur Elibol",

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "rimraf dist && webpack --mode development --config config/webpack.prod.js",
-    "start": "npm run build && node ./dist/app.js"
+    "start": "npm run build && node ./dist/app.js",
+    "watch": "nodemon -e ts -w ./src/server/ -x npm run watch:serve",
+    "watch:serve": "ts-node --inspect=3000 ./src/server/app.ts"
   },
   "author": "Onur Elibol",
   "license": "ISC",
@@ -17,6 +19,7 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
     "node-sass": "^4.7.2",
+    "nodemon": "^1.17.2",
     "postcss-loader": "^2.1.2",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.7",

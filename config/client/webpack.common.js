@@ -8,7 +8,7 @@ const nodeModules = utils.getExternalNodeModules();
 module.exports = {
   mode: "development",
   entry: {
-    "client/app": "./src/client/app.js"
+    "client/app": "./src/client/main.js"
   },
   output: {
     filename: "[name].js",

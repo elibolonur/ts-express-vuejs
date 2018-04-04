@@ -1,0 +1,75 @@
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin select-reset {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  margin: 0;
+  background: #fff;
+  background-image: none;
+}
+
+@mixin flex-vcenter {
+  @include flexbox;
+  align-items: center;
+}
+
+@mixin border($color, $sides: "", $width: 1px) {
+  @if ($sides == "") {
+    border: $width solid $color;
+  } @else {
+    @each $side in $sides {
+      @if ($side == "top" or
+           $side == "right" or
+           $side == "bottom" or
+           $side == "left") {
+        border-#{$side}: $width solid $color;
+      }
+    }
+  }
+}
+
+@mixin box-shadow($x: 1px, $y: 1px, $blur: 0, $spread: 1px, $color: $shadow_color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $x $y $blur $spread $color;
+    -moz-box-shadow:inset $x $y $blur $spread $color;
+    box-shadow:inset $x $y $blur $spread $color;
+  } @else {
+    -webkit-box-shadow: $x $y $blur $spread $color;
+    -moz-box-shadow: $x $y $blur $spread $color;
+    box-shadow: $x $y $blur $spread $color;
+  }
+}
+
+@mixin unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+}
+
+@mixin hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin visible {
+  opacity: 1;
+  visibility: visible;
+}

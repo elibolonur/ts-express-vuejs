@@ -1,5 +1,5 @@
 const path = require("path");
-const utils = require("./utils");
+const utils = require("../utils");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const nodeModules = utils.getExternalNodeModules();
@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "../dist")
+    path: path.resolve(__dirname, "../../dist")
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"]

@@ -6,6 +6,8 @@
     "quotemark": [
       true,
       "double"
-    ]
+    ],
+    "trailing-comma": false,
+    "import-name": false
   }
 }

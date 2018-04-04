@@ -1,34 +1,44 @@
-"use strict";
 const path = require("path");
-const utils = require("../utils");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-const nodeModules = utils.getExternalNodeModules();
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
   entry: {
-    "client/app": "./src/client/main.js"
+    "app": "./src/client/main.js"
   },
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "../../dist")
+    path: path.resolve(__dirname, "../../dist/client")
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: "src/client/index.html",
+      inject: true
+    })
+  ],
   resolve: {
-    extensions: [".js", ".vue", ".json", ".ts", ".tsx"],
+    extensions: ["*", ".js", ".vue", ".json"],
     alias: {
       vue$: "vue/dist/vue.esm.js"
     }
   },
+  devServer: {
+    contentBase: "./src/client",
+    hot: true
+  },
   module: {
     rules: [
       {
-        test: /\.vue$/,
-        loader: "vue-loader"
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
       },
       {
-        test: /\.tsx?$/,
-        loader: "ts-loader"
+        test: /\.vue$/,
+        loader: "vue-loader"
       },
       {
         test: /\.(png|jpg|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -77,7 +87,5 @@ module.exports = {
         ]
       }
     ]
-  },
-  target: "node",
-  externals: nodeModules
+  }
 };

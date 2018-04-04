@@ -1,7 +1,6 @@
 {
   "extends": [
-    "tslint-config-airbnb",
-    "tslint-config-prettier"
+    "tslint-config-airbnb"
   ],
   "rules": {
     "quotemark": [

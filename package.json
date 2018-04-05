@@ -4,9 +4,8 @@
   "description": "Boilerplate for Express + Vue.JS with Typescript",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --config config/client/webpack.dev.js",
-    "build": "webpack --mode production --config config/client/webpack.prod.js",
-    "start": "node ./dist/client/main.js",
+    "dev": "webpack-dev-server --config config/client/webpack.dev.js",
+    "build": "rimraf dist && webpack --config config/client/webpack.prod.js",
     "build:server": "rimraf dist && webpack --config config/server/webpack.prod.js",
     "watch:server": "nodemon --config ./config/nodemon.config.json"
   },
@@ -19,8 +18,7 @@
     "autoprefixer": "^8.2.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",

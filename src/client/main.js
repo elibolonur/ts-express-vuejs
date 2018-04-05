@@ -9,10 +9,6 @@ Vue.config.productionTip = false;
 Vue.use(Vuex);
 sync(store, router, { moduleName: "Route" });
 
-// new Vue({
-//   render: h => h(App)
-// }).$mount('#app')
-
 new Vue({
   el: "#app",
   router,

@@ -12,9 +12,22 @@ module.exports = merge(common, {
   },
   devServer: {
     hot: true,
-    contentBase: path.resolve(__dirname, "../../dist")
+    contentBase: path.resolve(__dirname, "../../dist"),
+    port: 8080,
+    clientLogLevel: "none",
+    historyApiFallback: true,
+    host: "0.0.0.0",
+    overlay: {
+      warnings: false,
+      errors: true
+    },
+    // open: true or "Google Chrome",
+    // openPage: "/different/page",
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": '"development"'
+    }),
   ]
 });

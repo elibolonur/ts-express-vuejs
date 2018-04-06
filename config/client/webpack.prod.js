@@ -1,3 +1,5 @@
+process.env.NODE_ENV = "production";
+
 const path = require("path");
 const webpack = require("webpack");
 const merge = require("webpack-merge");
@@ -7,7 +9,7 @@ module.exports = merge(common, {
   mode: "production",
   output: {
     path: path.resolve(__dirname, "../../dist/client"),
-    filename: "[name].js"
+    filename: "[name].[hash].js"
   },
   optimization: {
     splitChunks: {

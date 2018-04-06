@@ -43,17 +43,6 @@ module.exports = {
                 importLoaders: 1
               }
             },
-            {
-              loader: "postcss-loader",
-              options: {
-                config: {
-                  ctx: {
-                    cssnano: { preset: "default" },
-                    autoprefixer: {}
-                  }
-                }
-              }
-            },
             "sass-loader"
           ]
         })

@@ -1,18 +1,6 @@
 @mixin transition($args) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
   transition: $args;
 }
-
-@mixin flexbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-
 @mixin select-reset {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -26,7 +14,7 @@
 }
 
 @mixin flex-vcenter {
-  @include flexbox;
+  display: flex;
   align-items: center;
 }
 
@@ -47,20 +35,13 @@
 
 @mixin box-shadow($x: 1px, $y: 1px, $blur: 0, $spread: 1px, $color: $shadow_color, $inset: false) {
   @if $inset {
-    -webkit-box-shadow:inset $x $y $blur $spread $color;
-    -moz-box-shadow:inset $x $y $blur $spread $color;
     box-shadow:inset $x $y $blur $spread $color;
   } @else {
-    -webkit-box-shadow: $x $y $blur $spread $color;
-    -moz-box-shadow: $x $y $blur $spread $color;
     box-shadow: $x $y $blur $spread $color;
   }
 }
 
 @mixin unselectable {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none; 
 }
 

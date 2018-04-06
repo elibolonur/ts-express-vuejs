@@ -1,6 +1,7 @@
 "use strict";
 const path = require("path");
 const webpack = require("webpack");
+const utils = require("./utils");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -17,13 +18,10 @@ module.exports = {
   },
   module: {
     rules: [
-      /*
-        TO DO:
-        Add scss vue resources loader
-      */
       {
         test: /\.vue$/,
-        loader: "vue-loader"
+        loader: "vue-loader",
+        options: utils.vueLoaderOptions
       },
       {
         test: /\.js$/,
@@ -44,27 +42,7 @@ module.exports = {
         exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
-          use: [
-            {
-              loader: "css-loader",
-              options: {
-                sourceMap: true,
-                importLoaders: 1
-              }
-            },
-            {
-              loader: "postcss-loader",
-              options: {
-                config: {
-                  ctx: {
-                    cssnano: { preset: "default" },
-                    autoprefixer: {}
-                  }
-                }
-              }
-            },
-            "sass-loader"
-          ]
+          use: utils.scssLoaders
         })
       },
       {
@@ -83,6 +61,11 @@ module.exports = {
       filename: "index.html",
       template: "src/client/index.html",
       inject: true
+    }),
+    new ExtractTextPlugin({
+      filename: "style.[hash].css",
+      disable: false,
+      allChunks: true
     })
   ]
 };

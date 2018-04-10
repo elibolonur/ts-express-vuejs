@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config config/client/webpack.dev.js --color --progress",
-    "build": "rimraf dist && webpack --config config/client/webpack.prod.js",
-    "build:server": "rimraf dist && webpack --config config/server/webpack.prod.js",
+    "build": "rimraf dist/client && webpack --config config/client/webpack.prod.js",
+    "build:server": "rimraf dist/server && webpack --config config/server/webpack.prod.js",
     "watch:server": "nodemon --config ./config/nodemon.config.json"
   },
   "author": "Onur Elibol",

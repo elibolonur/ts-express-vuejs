@@ -1,5 +1,5 @@
 const path = require("path");
-const utils = require("../utils");
+const utils = require("./utils");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const nodeModules = utils.getExternalNodeModules();

@@ -7,7 +7,8 @@
     "dev": "webpack-dev-server --config config/client/webpack.dev.js --color --progress",
     "build": "rimraf dist/client && webpack --config config/client/webpack.prod.js",
     "build:server": "rimraf dist/server && webpack --config config/server/webpack.prod.js",
-    "watch:server": "nodemon --config ./config/nodemon.config.json"
+    "watch:server": "nodemon --config ./config/nodemon.config.json",
+    "clean": "rimraf dist"
   },
   "author": "Onur Elibol",
   "license": "ISC",

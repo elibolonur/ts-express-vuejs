@@ -1,5 +1,9 @@
 # Typescript + Express + Vuejs + Webpack 4
-Boilerplate for Express + Vue.JS with Typescript with Webpack 4
+Boilerplate for Express + Vue.JS with Typescript and Webpack 4
 
-Run `npm start` to build and run the project
-To only build run `npm run build`
+`npm run dev` to run client project with hot reloading.
+`npm run build` to build client project.
+
+`npm run dev:server` to run server project.
+`npm run build:server` to build server project.
+

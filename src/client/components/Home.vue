@@ -37,6 +37,7 @@ export default class Home extends Vue {
 
 <style lang="scss" scoped>
 .home-container {
-  background-color: $secondary;
+  color: $primary;
+  font-size: 16px;
 }
 </style>

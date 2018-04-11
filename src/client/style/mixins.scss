@@ -1,6 +1,7 @@
 @mixin transition($args) {
   transition: $args;
 }
+
 @mixin select-reset {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -11,11 +12,6 @@
   margin: 0;
   background: #fff;
   background-image: none;
-}
-
-@mixin flex-vcenter {
-  display: flex;
-  align-items: center;
 }
 
 @mixin border($color, $sides: "", $width: 1px) {

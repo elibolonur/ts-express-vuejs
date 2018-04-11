@@ -1,3 +1,5 @@
+@import "~normalize-scss/sass/_normalize.scss";
+@include normalize();
 @import "./vars.scss";
 @import "./mixins.scss";
 @import "./transitions.scss";

@@ -18,10 +18,14 @@ const sassLoader = {
   }
 };
 
+// This provides variables in every vue component
 const sassResLoader = {
   loader: "sass-resources-loader",
   options: {
-    resources: path.resolve(__dirname, "../../src/client/style/vars.scss")
+    resources: [
+      path.resolve(__dirname, "../../src/client/style/vars.scss"),
+      path.resolve(__dirname, "../../src/client/style/mixins.scss")
+    ]
   }
 };
 

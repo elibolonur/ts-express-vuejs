@@ -1,8 +1,8 @@
 {
   "files": ["src/server/app.ts"],
   "include": [
-    // TODO CHANGE
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "src/**/*.vue"
   ],
   "exclude": ["node_modules", "build"],
   "compileOnSave": false,

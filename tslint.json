@@ -8,6 +8,7 @@
       "double"
     ],
     "trailing-comma": false,
+    "no-trailing-whitespace": true,
     "import-name": false
   }
 }

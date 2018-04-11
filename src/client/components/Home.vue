@@ -2,10 +2,7 @@
   <div class="home-container">
     <p>{{msg}}</p>
     <br />
-
-    <button @click="testFunction">Click me to test</button>
-    <p class="t">change me</p>
-    
+    <button @click="testFunction">testFunction()</button>
   </div>
 </template>
 

@@ -12,7 +12,7 @@ module.exports = merge(common, {
   },
   output: {
     path: path.resolve(__dirname, "../../dist/client"),
-    filename: "[name].[hash].js"
+    filename: "[name].[hash:5].js"
   },
   devtool: "cheap-module-source-map",
   optimization: {

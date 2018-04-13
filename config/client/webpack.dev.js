@@ -8,7 +8,7 @@ const webpack = require("webpack");
 module.exports = merge(common, {
   mode: "development",
   output: {
-    filename: "[name].[hash].js",
+    filename: "[name].[hash:5].js",
     path: "/dist",
     publicPath: "/"
   },

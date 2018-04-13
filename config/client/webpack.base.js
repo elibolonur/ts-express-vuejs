@@ -72,7 +72,7 @@ module.exports = {
       inject: true
     }),
     new ExtractTextPlugin({
-      filename: "style.[hash].css",
+      filename: "style.[hash:5].css",
       disable: false,
       allChunks: true
     })

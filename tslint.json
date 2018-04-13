@@ -4,6 +4,7 @@
     "quotemark": [true, "double"],
     "triple-equals": [true],
     "no-trailing-whitespace": true,
-    "import-name": false
+    "import-name": false,
+    "trailing-comma": false
   }
 }

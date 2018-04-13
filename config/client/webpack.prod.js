@@ -7,6 +7,9 @@ const common = require("./webpack.base.js");
 
 module.exports = merge(common, {
   mode: "production",
+  entry: {
+    vendor: ["vue", "vuex", "vue-router", "vuex-router-sync"]
+  },
   output: {
     path: path.resolve(__dirname, "../../dist/client"),
     filename: "[name].[hash].js"

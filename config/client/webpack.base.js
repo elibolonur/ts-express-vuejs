@@ -7,8 +7,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: {
-    app: "./src/client/app.ts",
-    vendor: ["vue", "vuex", "vue-router", "vuex-router-sync"]
+    app: "./src/client/app.ts"
   },
   resolve: {
     // extensions: ["*", ".ts", ".js", ".vue", ".json"],

@@ -14,6 +14,7 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, "../../dist/client"),
     filename: "[name].[hash].js"
   },
+  devtool: "cheap-module-source-map",
   optimization: {
     splitChunks: {
       cacheGroups: {

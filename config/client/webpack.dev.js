@@ -12,6 +12,7 @@ module.exports = merge(common, {
     path: "/dist",
     publicPath: "/"
   },
+  devtool: "cheap-module-eval-source-map",
   devServer: {
     hot: true,
     contentBase: path.resolve(__dirname, "../../dist"),

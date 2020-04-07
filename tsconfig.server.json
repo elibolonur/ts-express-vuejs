@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "dist/server",
     "strict": true,
-    "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "removeComments": true,
+    "typeRoots": ["node_modules/@types"],
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
@@ -16,7 +18,7 @@
     ],
     "paths": {
       "@/*": [
-        "src/*"
+        "server/*"
       ]
     },
     "lib": [
@@ -26,16 +28,9 @@
       "scripthost"
     ]
   },
+  "files": ["server/app.ts"],
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "server/**/*.ts",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "server/**/*.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "exclude": ["node_modules", "dist"]
 }

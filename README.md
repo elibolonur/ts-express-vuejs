@@ -3,7 +3,8 @@ Boilerplate for Express + Vue.JS with Typescript
 
 Feel free to send PR :tada:
 
-`npm run serve` to run both client & server project concurrently
+`npm run serve` to run both client & server project concurrently 
+ 
 `npm run build` to build both client & server project to dist/
 
 #### If you want to run server & client separately 

@@ -1,6 +1,8 @@
 # Typescript + Express + Vuejs
 Boilerplate for Express + Vue.JS with Typescript
 
+If you need a similar boilerplate for Vue 3, Typescript and Composition api [check it here](https://github.com/elibolonur/ts-express-vue3)
+
 Feel free to send PR :tada:
 
 `npm run serve` to run both client & server project concurrently 

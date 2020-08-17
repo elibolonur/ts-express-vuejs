@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "Boilerplate for Express + Vue.JS with Typescript",
   "private": true,
+  "author": "Onur Elibol",
   "scripts": {
     "serve": "concurrently 'npm run dev:server' 'npm run dev:client' --raw",
     "build": "concurrently 'npm run build:server' 'npm run build:client'",

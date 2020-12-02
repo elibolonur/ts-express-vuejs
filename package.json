@@ -5,8 +5,8 @@
   "private": true,
   "author": "Onur Elibol",
   "scripts": {
-    "serve": "concurrently 'npm run dev:server' 'npm run dev:client' --raw",
-    "build": "concurrently 'npm run build:server' 'npm run build:client'",
+    "serve": "concurrently \"npm run dev:server\" \"npm run dev:client\" --raw",
+    "build": "concurrently \"npm run build:server\" \"npm run build:client\"",
     "dev:client": "vue-cli-service serve",
     "build:client": "vue-cli-service build",
     "dev:server": "nodemon --config ./nodemon.config.json",

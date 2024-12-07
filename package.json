@@ -18,7 +18,7 @@
     "core-js": "^3.6.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.3",
-    "vue": "^2.6.11",
+    "vue": "^3.0.0",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.4.1",
     "vue-router": "^3.1.6",
